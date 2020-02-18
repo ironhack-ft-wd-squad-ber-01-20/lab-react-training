@@ -23,13 +23,23 @@ const CreditCard = props => {
     margin: "30px auto"
   };
   const typeStyle = {
-    textAlign: "right",
-    color: props.color
+    textAlign: "right"
   };
+  const imgStyle = {
+    width: "50px"
+  };
+  let img = "";
+  if (props.type == "Visa") {
+    img = "../img/master-card.svg";
+  } else if (props.type == "Master Card") {
+    img = "../img/visa.png";
+  }
 
   return (
     <div style={style} className="credit-card">
-      <div style={typeStyle}>{props.type}</div>
+      <div style={typeStyle}>
+        <img src={img} alt="credit card logo" style={imgStyle} />
+      </div>
       <h2 style={h2Stlye}>
         •••• •••• •••• {props.number.substring(props.number.length - 4)}
       </h2>
