@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import profiles from "./data/berlin.json";
 
 // ID CARD
 const IdCard = props => {
@@ -99,7 +100,7 @@ const BoxColor = props => {
   let bValue = props.b;
 
   const styles = {
-    backgroundColor: "rgb(" + rValue + "," + gValue + "," + bValue
+    backgroundColor: "rgb(" + rValue + "," + gValue + "," + bValue + ")"
   };
 
   return (
@@ -337,14 +338,129 @@ class Dice extends Component {
 
 // CAROUSEL CLASS COMPONENT
 class Carousel extends Component {
+  constructor(props) {
+    super(props);
+    this.props = props;
+  }
+
   state = {
-    url: this.props[this.index]
+    index: 0
+  };
+
+  goLeft = () => {
+    if (this.state.index === 0) {
+      this.setState({ index: this.props.imgs.length - 1 });
+    } else {
+      this.setState({ index: this.state.index - 1 });
+    }
+  };
+
+  goRight = () => {
+    if (this.state.index === this.props.imgs.length - 1) {
+      this.setState({ index: 0 });
+    } else {
+      this.setState({ index: this.state.index + 1 });
+    }
   };
 
   render() {
-    return <img src={this.state.url} alt="carousel"></img>;
+    return (
+      <div>
+        <button onClick={this.goLeft}>Left</button>
+        <img src={this.props.imgs[this.state.index]} alt="carousel"></img>
+        <button onClick={this.goRight}>Right</button>
+      </div>
+    );
   }
 }
+
+// NUMBERS TABLE CLASS COMPONENT
+class NumbersTable extends Component {
+  constructor(props) {
+    super(props);
+    this.props = props;
+    this.numArray = [];
+  }
+
+  populateNumbers = () => {
+    for (let i = 1; i <= this.props.limit; i++) {
+      this.numArray.push(i);
+    }
+  };
+
+  render() {
+    return (
+      <div className="numbers-list">
+        {this.populateNumbers()}
+        {this.numArray.map(number => {
+          return (
+            <React.Fragment>
+              {number % 2 === 0 && <div className="red-number">{number}</div>}
+              {number % 2 === 1 && <div className="white-number">{number}</div>}
+            </React.Fragment>
+          );
+        })}
+      </div>
+    );
+  }
+}
+
+// FACEBOOK FUNCTIONAL COMPONENT
+const Facebook = props => {
+  let countriesArr = [];
+
+  props.data.map(profile => {
+    if (countriesArr.indexOf(profile.country) === -1) {
+      countriesArr.push(profile.country);
+    }
+    return countriesArr;
+  });
+
+  return (
+    <React.Fragment>
+      {countriesArr.forEach(country => {
+        return (
+          <div>
+            <button>{country}</button>
+          </div>
+        );
+      })}
+
+      {props.data.map(profile => {
+        return (
+          <div className="border-box">
+            <div className="facebook-photo">
+              <img src={profile.img} alt="fb"></img>
+            </div>
+            <div className="facebook-details">
+              <p>
+                <span>First Name: </span>
+                {profile.firstName}
+              </p>
+              <p>
+                <span>Last Name: </span>
+                {profile.lastName}
+              </p>
+              <p>
+                <span>Country: </span>
+                {profile.country}
+              </p>
+              {profile.isStudent ? (
+                <p>
+                  <span>Type: </span>Student
+                </p>
+              ) : (
+                <p>
+                  <span>Type: </span>Teacher
+                </p>
+              )}
+            </div>
+          </div>
+        );
+      })}
+    </React.Fragment>
+  );
+};
 
 // APP CLASS
 class App extends Component {
@@ -487,6 +603,14 @@ class App extends Component {
             "https://randomuser.me/api/portraits/men/2.jpg"
           ]}
         />
+
+        {/* NUMBERS TABLE */}
+        <h1>NumbersTable</h1>
+        <NumbersTable limit={12} />
+
+        {/* FACEBOOK */}
+        <h1>Facebook</h1>
+        <Facebook data={profiles}></Facebook>
       </div>
     );
   }
