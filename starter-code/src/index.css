@@ -12,3 +12,20 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.idCard {
+  display: flex;
+  border: 1px black solid;
+  margin: 5px auto;
+}
+.data-box {
+  margin-left: 20px;
+}
+
+img {
+  height: 90%;
+}
+
+.diceImg {
+  height: 100px;
+}
