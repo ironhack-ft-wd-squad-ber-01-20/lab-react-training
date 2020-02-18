@@ -12,7 +12,7 @@ const IdCard = props => {
           <br />
           <span>Gender:</span> {props.gender}
           <br />
-          <span>Height:</span> {props.height}
+          <span>Height:</span> {props.height / 100}m
           <br />
           <span>Birth:</span> {props.birth.toDateString()}
         </p>
