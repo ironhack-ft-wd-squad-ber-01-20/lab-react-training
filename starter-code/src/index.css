@@ -92,3 +92,18 @@ code {
   padding: 0;
   margin: 0;
 }
+
+.likeButton {
+  border: 1px solid black;
+  padding: 5px 10px;
+  margin: 5px;
+  font-size: 1em;
+}
+
+.clickablePicture {
+  width: 100px;
+}
+
+.dice img {
+  width: 100px;
+}

@@ -1,148 +1,11 @@
 import React, { Component } from "react";
-
-const IdCard = props => {
-  return (
-    <div className="container idcard">
-      <img src={props.picture} alt={props.firstName} />
-      <div>
-        <p>
-          <span>First name:</span> {props.firstName}
-          <br />
-          <span>Last name:</span> {props.lastName}
-          <br />
-          <span>Gender:</span> {props.gender}
-          <br />
-          <span>Height:</span> {props.height}
-          <br />
-          <span>Birth:</span> {props.birth.toDateString()}
-        </p>
-      </div>
-    </div>
-  );
-};
-
-const Greetings = props => {
-  let greeting;
-  if (props.lang === "de") {
-    greeting = "Hallo";
-  }
-
-  if (props.lang === "fr") {
-    greeting = "Bonjour";
-  }
-
-  if (props.lang === "en") {
-    greeting = "Hello";
-  }
-
-  if (props.lang === "es") {
-    greeting = "Hola";
-  }
-
-  return (
-    <div className="container greetings">
-      {greeting} {props.children}
-    </div>
-  );
-};
-
-const Random = props => {
-  return (
-    <div className="container">
-      Random value between {props.min} and {props.max} =>{" "}
-      {Math.floor(Math.random() * (props.max - props.min) + props.min)}
-    </div>
-  );
-};
-
-const BoxColor = props => {
-  let rgbToHex = function(rgb) {
-    let hex = Number(rgb).toString(16);
-    if (hex.length < 2) {
-      hex = "0" + hex;
-    }
-    return hex;
-  };
-
-  let red = rgbToHex(props.r);
-  let green = rgbToHex(props.g);
-  let blue = rgbToHex(props.b);
-  let fullHex = "#" + red + green + blue;
-
-  let divStyle = {
-    backgroundColor: fullHex
-  };
-
-  return (
-    <div className="container boxColor" style={divStyle}>
-      <p>
-        rgb({props.r},{props.b},{props.g})<br />
-        {fullHex}
-      </p>
-    </div>
-  );
-};
-
-const CreditCard = props => {
-  // console.log(props.number);
-  let num = props.number.toString();
-  let creditCard = "•••• •••• •••• " + num.substring(num.length - 4);
-  // console.log(creditCard);
-  let divStyle = {
-    backgroundColor: props.bgColor,
-    color: props.color
-  };
-
-  let imgUrl;
-  if (props.type === "Visa") {
-    imgUrl = "/img/visa.png";
-  }
-  if (props.type === "Master Card") {
-    imgUrl = "/img/master-card.svg";
-  }
-  return (
-    <div className="creditCard" style={divStyle}>
-      <p className="cardType">
-        <img src={imgUrl} alt={props.type} height="20px" />
-      </p>
-      <p className="cardNumber">{creditCard}</p>
-      <p>
-        Expires: {props.expirationMonth}/{props.expirationYear} {props.bank}
-        <br />
-        {props.owner}
-      </p>
-    </div>
-  );
-};
-
-const Rating = props => {
-  let rating = Math.round(props.children);
-
-  let stars = "";
-  for (let i = 0; i < rating; i++) {
-    stars += "★";
-  }
-
-  for (let i = rating; i < 5; i++) {
-    stars += "☆";
-  }
-
-  return <div className="ratings">{stars}</div>;
-};
-
-const DriverCard = props => {
-  return (
-    <div className="driverCard">
-      <img src={props.img} alt={props.name}></img>
-      <div className="driverInfo">
-        <h2>{props.name}</h2>
-        <Rating>{props.rating}</Rating>
-        <br />
-        {props.car.model} - {props.car.licensePlate}
-      </div>
-    </div>
-  );
-};
+import IdCard from "./Components/IdCard";
+import Greetings from "./Components/Greetings";
+import Random from "./Components/Random";
+import BoxColor from "./Components/BoxColor";
+import CreditCard from "./Components/CreditCard";
+import Rating from "./Components/Rating";
+import DriverCard from "./Components/DriverCard";
 
 class App extends Component {
   render() {
@@ -157,7 +20,6 @@ class App extends Component {
           birth={new Date("1992-07-14")}
           picture="https://randomuser.me/api/portraits/men/44.jpg"
         />
-
         <IdCard
           lastName="Delores "
           firstName="Obrien"
@@ -166,19 +28,15 @@ class App extends Component {
           birth={new Date("1988-05-11")}
           picture="https://randomuser.me/api/portraits/women/44.jpg"
         />
-
         <h1>Greetings</h1>
         <Greetings lang="de">Ludwig</Greetings>
         <Greetings lang="fr">François</Greetings>
-
         <h1>Random</h1>
         <Random min={1} max={6} />
         <Random min={1} max={100} />
-
         <h1>BoxColor</h1>
         <BoxColor r={255} g={0} b={0} />
         <BoxColor r={128} g={255} b={0} />
-
         <h1>CreditCards</h1>
         <div className="creditCards">
           <CreditCard
@@ -212,7 +70,6 @@ class App extends Component {
             color="white"
           />
         </div>
-
         <h1>Ratings</h1>
         <Rating>0</Rating>
         <Rating>1.49</Rating>
@@ -220,7 +77,6 @@ class App extends Component {
         <Rating>3</Rating>
         <Rating>4</Rating>
         <Rating>5</Rating>
-
         <h1>DriverCard</h1>
         <DriverCard
           name="Travis Kalanick"
@@ -240,6 +96,104 @@ class App extends Component {
             licensePlate: "BE33ER"
           }}
         />
+        <h1>LikeButton</h1>
+        <LikeButton /> <LikeButton />
+        <h1>ClickablePicture</h1>
+        <ClickablePicture
+          img="/img/persons/maxence.png"
+          imgClicked="/img/persons/maxence-glasses.png"
+        />
+        <h1>Dice</h1>
+        <Dice />
+      </div>
+    );
+  }
+}
+
+class LikeButton extends React.Component {
+  state = {
+    count: 0,
+    backgroundColor: ""
+  };
+
+  handleClick = () => {
+    let color = ["purple", "blue", "green", "yellow", "orange", "red"];
+    let randomColor = color[Math.floor(Math.random() * color.length)];
+
+    this.setState({
+      count: this.state.count + 1,
+      style: { backgroundColor: randomColor }
+    });
+  };
+
+  render() {
+    return (
+      <button
+        className="likeButton"
+        onClick={this.handleClick}
+        style={this.state.style}
+      >
+        {this.state.count} Likes
+      </button>
+    );
+  }
+}
+
+class ClickablePicture extends React.Component {
+  state = {
+    img: "img"
+  };
+
+  togglePicture = () => {
+    if (this.state.img === "img") {
+      this.setState({
+        img: "imgClicked"
+      });
+    } else if (this.state.img === "imgClicked") {
+      this.setState({
+        img: "img"
+      });
+    }
+  };
+
+  render() {
+    let imgUrl = this.state.img;
+    return (
+      <img
+        className="clickablePicture"
+        src={this.props[imgUrl]}
+        alt={this.state.img}
+        onClick={this.togglePicture}
+      />
+    );
+  }
+}
+
+class Dice extends React.Component {
+  state = {
+    imgUrl: "/img/dice1.png"
+  };
+
+  diceClick = () => {
+    let randomNumber = Math.ceil(Math.random() * 5);
+    let randomImage = "/img/dice" + randomNumber + ".png";
+
+    this.setState({
+      imgUrl: "/img/dice-empty.png"
+    });
+    setTimeout(() => {
+      this.setState({
+        imgUrl: randomImage
+      });
+    }, 1000);
+  };
+
+  render() {
+    // let imgUrl = "/img/dice" + this.state.number + ".png";
+    // console.log(imgUrl);
+    return (
+      <div className="dice">
+        <img src={this.state.imgUrl} alt="dice" onClick={this.diceClick} />
       </div>
     );
   }
