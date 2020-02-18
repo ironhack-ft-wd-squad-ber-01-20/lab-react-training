@@ -12,3 +12,133 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.container {
+  border: 1px solid black;
+  padding: 5px;
+  margin: 5px;
+}
+
+.idcard {
+  display: flex;
+  flex-direction: row;
+}
+
+.idcard img {
+  height: 100%;
+  margin: 5px;
+}
+
+.idcard span {
+  font-weight: bold;
+}
+
+.boxColor {
+  text-align: center;
+}
+
+.creditCards {
+  display: flex;
+}
+
+.creditCard {
+  border: none;
+  border-radius: 20px;
+  padding: 5px;
+  margin: 5px;
+  width: 340px;
+}
+
+.cardType {
+  text-align: right;
+}
+
+.cardNumber {
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.ratings {
+  font-size: 2em;
+}
+
+.driverCard {
+  display: flex;
+  margin: 5px;
+  padding: 5px;
+  background-color: #425cbb;
+  border-radius: 15px;
+  /* height: 100px; */
+  color: #ffffff;
+  align-items: center;
+  justify-content: center;
+}
+
+.driverCard img {
+  height: 100px;
+  width: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.driverInfo {
+  text-align: left;
+  padding: 10px;
+}
+
+.driverCard h2 {
+  font-size: 1.5em;
+  font-weight: bold;
+  padding: 0;
+  margin: 0;
+}
+
+.likeButton {
+  border: 1px solid black;
+  padding: 5px 10px;
+  margin: 5px;
+  font-size: 1em;
+}
+
+.clickablePicture {
+  width: 100px;
+}
+
+.dice img {
+  width: 100px;
+}
+
+.numbersTable {
+  list-style-type: none;
+  flex-wrap: wrap;
+  display: flex;
+  /* margin: 0; */
+  padding: 0;
+}
+
+.numbersTable li {
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.red {
+  background-color: red;
+}
+
+.faceBook {
+  width: 600px;
+  display: flex;
+}
+
+.faceBook img {
+  width: 150px;
+  margin: 5px;
+}
+
+.faceBook span {
+  font-weight: bold;
+}
