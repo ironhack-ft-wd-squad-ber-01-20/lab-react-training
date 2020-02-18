@@ -6,6 +6,12 @@ import BoxColor from "./Components/BoxColor";
 import CreditCard from "./Components/CreditCard";
 import Rating from "./Components/Rating";
 import DriverCard from "./Components/DriverCard";
+import LikeButton from "./Components/LikeButton";
+import ClickablePicture from "./Components/ClickablePicture";
+import Dice from "./Components/Dice";
+import Carousel from "./Components/Carousel";
+import NumbersTable from "./Components/NumbersTable";
+import FaceBook from "./Components/FaceBook";
 
 class App extends Component {
   render() {
@@ -105,95 +111,19 @@ class App extends Component {
         />
         <h1>Dice</h1>
         <Dice />
-      </div>
-    );
-  }
-}
-
-class LikeButton extends React.Component {
-  state = {
-    count: 0,
-    backgroundColor: ""
-  };
-
-  handleClick = () => {
-    let color = ["purple", "blue", "green", "yellow", "orange", "red"];
-    let randomColor = color[Math.floor(Math.random() * color.length)];
-
-    this.setState({
-      count: this.state.count + 1,
-      style: { backgroundColor: randomColor }
-    });
-  };
-
-  render() {
-    return (
-      <button
-        className="likeButton"
-        onClick={this.handleClick}
-        style={this.state.style}
-      >
-        {this.state.count} Likes
-      </button>
-    );
-  }
-}
-
-class ClickablePicture extends React.Component {
-  state = {
-    img: "img"
-  };
-
-  togglePicture = () => {
-    if (this.state.img === "img") {
-      this.setState({
-        img: "imgClicked"
-      });
-    } else if (this.state.img === "imgClicked") {
-      this.setState({
-        img: "img"
-      });
-    }
-  };
-
-  render() {
-    let imgUrl = this.state.img;
-    return (
-      <img
-        className="clickablePicture"
-        src={this.props[imgUrl]}
-        alt={this.state.img}
-        onClick={this.togglePicture}
-      />
-    );
-  }
-}
-
-class Dice extends React.Component {
-  state = {
-    imgUrl: "/img/dice1.png"
-  };
-
-  diceClick = () => {
-    let randomNumber = Math.ceil(Math.random() * 6);
-    let randomImage = "/img/dice" + randomNumber + ".png";
-
-    this.setState({
-      imgUrl: "/img/dice-empty.png"
-    });
-    setTimeout(() => {
-      this.setState({
-        imgUrl: randomImage
-      });
-    }, 1000);
-  };
-
-  render() {
-    // let imgUrl = "/img/dice" + this.state.number + ".png";
-    // console.log(imgUrl);
-    return (
-      <div className="dice">
-        <img src={this.state.imgUrl} alt="dice" onClick={this.diceClick} />
+        <h1>Carousel</h1>
+        <Carousel
+          imgs={[
+            "https://randomuser.me/api/portraits/women/1.jpg",
+            "https://randomuser.me/api/portraits/men/1.jpg",
+            "https://randomuser.me/api/portraits/women/2.jpg",
+            "https://randomuser.me/api/portraits/men/2.jpg"
+          ]}
+        />
+        <h1>NumbersTable</h1>
+        <NumbersTable limit={12} />
+        <h1>Facebook</h1>
+        <FaceBook />
       </div>
     );
   }
