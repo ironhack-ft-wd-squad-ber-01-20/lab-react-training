@@ -1,7 +1,7 @@
-import React from "react";
+// import React from "react";
 
-const CreditCard = () => {
+// const CreditCard = () => {
     
-}
+// }
 
-export default CreditCard; 
+// export default CreditCard; 

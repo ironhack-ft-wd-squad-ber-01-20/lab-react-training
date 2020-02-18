@@ -3,13 +3,66 @@ import IdCard from "./IdCard";
 import Greetings from "./Greeting";
 import Random from "./Random";
 import BoxColor from "./BoxColor";
-import CreditCard from "./CreditCard";
+// import CreditCard from "./CreditCard";
+
+// Declare variable for clickable images
+const imagesPath = {
+  minus: "/img/persons/maxence.png",
+  plus: "/img/persons/maxence-glasses.png"
+};
+
+class LikeButton extends Component {
+  // LikeButton
+  state = {
+    buttonText: "Like"
+  };
+
+  toggleLike = () => {
+    if (this.state.buttonText === "Like") {
+      // Set buttonText to 'Unlike' if it was 'Like'
+      this.setState({
+        buttonText: "Unlike"
+      });
+    } else if (this.state.buttonText === "Unlike") {
+      // Set buttonText to 'Like' if it was 'Unlike'
+      this.setState({
+        buttonText: "Like"
+      });
+    }
+  };
+}
 
 class App extends Component {
+  // Clickable Image
+  state = {
+    open: true
+  };
+
+  ClickablePicture = () => {
+    this.setState(state => ({ open: !state.open }));
+  };
+
+  getPictureName = () => (this.state.open ? "plus" : "minus");
+
   render() {
+    console.log("Render");
+    console.log(this.state);
+
+    const pictureName = this.getPictureName();
+
     return (
       <div className="App">
+        <div>
+          <img
+            style={{ maxWidth: "200px" }}
+            src={imagesPath[pictureName]}
+            onClick={this.ClickablePicture}
+            alt={this.pictureName}
+          />
+        </div>
         {/* TODO: Use the IdCard component */}
+        {/* Like Button */}
+        <button onClick={this.toggleLike}>{this.state.buttonText}</button>
         <IdCard
           lastName="Doe"
           firstName="John"
@@ -36,7 +89,7 @@ class App extends Component {
         <BoxColor r={255} g={0} b={0} />
         <BoxColor r={128} g={255} b={0} />
         {/* Credit Card */}
-        <CreditCard
+        {/* <CreditCard
           type="Visa"
           number="0123456789018845"
           expirationMonth={3}
@@ -65,7 +118,7 @@ class App extends Component {
           owner="Firstname Lastname"
           bgColor="#ddbb55"
           color="white"
-        />
+        /> */}
       </div>
     );
   }
