@@ -12,3 +12,39 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.dice {
+  width: 200px;
+}
+
+.numbersTable {
+  display: flex;
+  list-style-type: none;
+  height: 50px;
+  width: 50px;
+  border: 1px solid #000;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.even {
+  background-color: red;
+  display: flex;
+  list-style-type: none;
+  height: 50px;
+  width: 50px;
+  border: 1px solid #000;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.numGrid {
+  display: flex;
+}
+.allNums {
+  display: table-row;
+}
