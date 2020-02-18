@@ -6,9 +6,86 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.idcard {
+  border-style: solid;
+  border-width: 5px;
+  margin: 3px;
+}
+
+.creditcard {
+  border-style: grey;
+  border-width: 1px;
+  background-color: khaki;
+}
+
+.greeting {
+  border-style: red;
+  border-width: 2px;
+  margin: 3px;
+}
+
+.random {
+  border-color: #21894;
+  border-style: solid;
+  border-width: 2px;
+  margin: 3px;
+}
+
+.boxcolor {
+  border-color:rgb(red, green, blue);
+  border-style: solid;
+  border-width: 2px;
+  margin: 3px;
+  
+}
+
+.likebutton {
+  border-color:rgb(red, green, blue);
+  border-style: solid;
+  border-width: 2px;
+  margin: 3px;
+  
+}
+
+.dice {
+  border-color:rgb(red, green, blue);
+  border-style: dotted;
+  border-width: 2px;
+  margin: 3px;
+  
+}
+
+.clickablepicture{
+  width: 150px;
+   
+ }
+
+
+.diceimage {
+ width: 150px;
+  
+}
+
+
+.square1 {
+  height: 50px;
+  width: 50px;
+  background-color: #667;
+  align-content: center;
+}
+
+.square2 {
+  height: 50px;
+  width: 50px;
+  background-color: rgb(255, 0, 0);
+  align-content: center;
+
 }
