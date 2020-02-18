@@ -1,0 +1,53 @@
+.label {
+  font-weight: bold;
+}
+
+.id-card-container,
+.greeting,
+.random {
+  border: 1px solid black;
+  margin: 10px;
+  padding: 5px;
+}
+
+.id-card-container {
+  display: flex;
+}
+.id-card-image {
+  margin-right: 10px;
+}
+
+.box-color {
+  border: 1px solid black;
+  margin: 10px;
+  padding: 30px;
+  text-align: center;
+}
+
+.credit-cards {
+  display: flex;
+}
+
+.driver-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: royalblue;
+  color: white;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 12px;
+}
+.driver-content {
+  margin-left: 10px;
+}
+.driver-card h2,
+.driver-card p {
+  padding: 0px;
+  margin: 3px;
+}
+
+.profiles img {
+  width: 100px;
+}
