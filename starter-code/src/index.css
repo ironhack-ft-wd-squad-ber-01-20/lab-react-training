@@ -1,5 +1,5 @@
 body {
-  margin: 0;
+  margin: 0px 0px 24px 24px;
   padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
@@ -8,7 +8,190 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+h1 {
+  margin-top: 50px;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.border-box {
+  width: 650px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  border: 1px solid black;
+  margin: 16px;
+  padding: 12px;
+}
+
+/* .id-photo {
+  padding: 12px;
+} */
+
+.id-details {
+  padding-left: 12px;
+  margin-top: -12px;
+}
+
+.id-details span {
+  font-weight: bold;
+}
+
+.id-details p {
+  line-height: 0.5;
+}
+
+.box-color {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.credit-card {
+  width: 340px;
+  height: 200px;
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin: 16px;
+}
+
+.card-type {
+  width: 95%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.card-type img {
+  width: 50px;
+  padding-top: 8px;
+}
+
+.card-number {
+  width: 95%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+  color: #fff;
+}
+
+.card-details {
+  width: 95%;
+}
+
+.card-details p {
+  padding-left: 12px;
+  color: #fff;
+  line-height: 0.2;
+  font-size: 14px;
+}
+
+.stars {
+  font-size: 28px;
+  letter-spacing: 4px;
+}
+
+.driver-card {
+  background-color: #455eb5;
+  width: 650px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 16px;
+  padding: 24px;
+}
+
+.image-cropper {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.driver-details {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-left: 24px;
+}
+
+.driver-details .stars {
+  margin: 0;
+}
+
+button {
+  height: 40px;
+  width: 100px;
+}
+
+.maxence {
+  width: 350px;
+}
+
+.dice {
+  width: 100px;
+}
+
+.numbers-list {
+  width: 40%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.red-number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  border: 1px solid black;
+  color: black;
+  font-size: 32px;
+}
+
+.white-number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  border: 1px solid black;
+  color: black;
+  font-size: 32px;
+}
+
+.facebook-photo img {
+  width: 150px;
+}
+
+.facebook-details {
+  padding-left: 16px;
+}
+
+.facebook-details span {
+  font-weight: bold;
+}
+
+.countries {
+  width: 100%;
+  height: 300px;
 }
