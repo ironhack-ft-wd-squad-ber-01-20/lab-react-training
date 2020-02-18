@@ -175,7 +175,7 @@ class Dice extends React.Component {
   };
 
   diceClick = () => {
-    let randomNumber = Math.ceil(Math.random() * 5);
+    let randomNumber = Math.ceil(Math.random() * 6);
     let randomImage = "/img/dice" + randomNumber + ".png";
 
     this.setState({
