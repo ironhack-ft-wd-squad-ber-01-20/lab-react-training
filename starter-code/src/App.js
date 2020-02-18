@@ -3,6 +3,7 @@ import IdCard from "./IdCard";
 import Greetings from "./Greeting";
 import Random from "./Random";
 import BoxColor from "./BoxColor";
+// import NumbersTable from "./NumbersTable";
 // import CreditCard from "./CreditCard";
 
 // Declare variable for clickable images
