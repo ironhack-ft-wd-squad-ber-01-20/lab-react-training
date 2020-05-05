@@ -12,3 +12,87 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+img {
+  height: 100px;
+}
+
+.container {
+  border: 1px solid black;
+  margin: 10px;
+  padding: 5px;
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+}
+
+.no-margin {
+  margin: 0;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.credit-card {
+  display: flex;
+  flex-direction: row;
+}
+
+.logo {
+  height: 20px;
+  margin: 5px;
+  display: inline-flex;
+}
+
+.expire-bank {
+  display: flex;
+  flex-direction: row;
+}
+
+.card-details {
+  margin: 0 30px 0 0;
+}
+
+.card-number {
+  font-size: larger;
+}
+
+.driver-card {
+  background-color: #425cbb;
+  border-radius: 15px;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  padding: 20px;
+}
+
+.driver-img {
+  width: 100%;
+}
+
+.driver-img-container {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.driver-details {
+  flex-direction: column;
+  margin-left: 20px;
+}
+
+.driver-details h1 {
+  margin: 0;
+}
+
+.driver-details p {
+  margin: 0;
+}
