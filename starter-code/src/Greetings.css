@@ -1,0 +1,12 @@
+.greetingsBox{
+    margin-left:2rem;
+    margin-right: 90rem;
+    margin-top: 1rem;
+    height:2rem;
+    border-style: double;
+    border-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
