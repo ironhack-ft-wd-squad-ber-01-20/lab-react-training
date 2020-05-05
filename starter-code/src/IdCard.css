@@ -1,0 +1,13 @@
+.eachIdBox{
+    border-color: black;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    border-style: double;
+    display: flex;
+    flex-direction: row;
+}
+
+.IdText{
+    margin-left: 5rem;
+    margin-top: 0.5rem;
+    }

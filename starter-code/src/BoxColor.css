@@ -1,0 +1,16 @@
+.BoxColorBox{
+    margin-top: 2rem;
+    height:6rem;
+    width: 20rem;
+    margin-left: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rgb{
+    line-height: 0.01rem;
+   display: flex;
+   flex-direction: column;
+    
+}

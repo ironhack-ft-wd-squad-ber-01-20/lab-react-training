@@ -1,0 +1,24 @@
+.creditcard{
+    width:20rem;
+    height:10rem;
+    margin-left:2rem;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    border-radius: 1rem;
+    line-height: 0.5rem;
+    
+}
+.creditcard >img{
+    margin-top:0.3rem;
+    margin-left: 17rem;
+
+}
+.cardText{
+    margin-left: 1rem;
+    margin-top:2rem;
+   
+}
+
+.cardText >p{
+    font-size: 10px;
+}
