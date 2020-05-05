@@ -7,7 +7,7 @@ function IdCard(props) {
       <p> Last Name: {props.lastName}</p>
       <p> Gender: {props.gender}</p>
       <p> Birthdate: {props.birth}</p>
-      <img src={props.picture} />
+      <img src={props.picture} alt="dion" />
     </Fragment>
   );
 }
