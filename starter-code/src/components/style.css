@@ -1,0 +1,70 @@
+.IdCard {
+  display: flex;
+}
+
+.box {
+  border: 1px solid #000;
+  padding: 5px;
+  margin: 10px 0;
+}
+
+.IdCard img {
+  margin-right: 5px;
+}
+
+.BoxColor {
+  text-align: center;
+}
+
+.cardContainer {
+  display: flex;
+}
+
+.type img {
+  width: 50px;
+}
+
+.type {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.number {
+  font-size: 1.9em;
+  text-align: center;
+}
+
+.bank {
+  margin-left: 20px;
+}
+
+.stars {
+  font-size: 2.5rem;
+}
+
+.driverCard {
+  background-color: #425cbb;
+  color: white;
+  padding: 15px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.driverCard img {
+  border-radius: 100px;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.driverCard h2 {
+  margin: 1px 0;
+}
+
+.driverCard .stars {
+  font-size: 2rem;
+}
