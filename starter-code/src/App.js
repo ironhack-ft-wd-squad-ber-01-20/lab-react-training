@@ -5,8 +5,10 @@ import Random from "./components/Random.js";
 import BoxColor from "./components/BoxColor.js";
 import CreditCard from "./components/CreditCard/CreditCard.js";
 import Rating from "./components/Rating.js";
-import DriverCard from "./components/DriverCard.js";
+import DriverCard from "./components/DriverCard/DriverCard.js";
 import LikeButton from "./components/LikeButton.js";
+import ClickablePicture from "./components/ClickablePicture.js";
+import Dice from "./components/Dice.js";
 
 class App extends Component {
   render() {
@@ -101,6 +103,14 @@ class App extends Component {
 
   <h1>Like Button</h1>
   <LikeButton /> <LikeButton />
+
+  <h1>Clickable Picture</h1>
+  <ClickablePicture
+  img="/img/persons/maxence.png"
+  imgClicked="/img/persons/maxence-glasses.png" />
+
+  <h1>Dice</h1>
+  <Dice />
 
       </div>
     );
