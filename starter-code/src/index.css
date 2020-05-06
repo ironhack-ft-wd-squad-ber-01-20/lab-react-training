@@ -56,3 +56,11 @@ code {
   width: 14rem;
   border-radius: 51%;
 }
+.likeButton{
+  padding: 1.5em;
+  color: #fff;
+  font-size: 1rem;
+}
+.imgDice{
+  width: 5rem;
+}

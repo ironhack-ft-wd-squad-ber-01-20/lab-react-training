@@ -2,9 +2,13 @@ import React, { Component } from 'react';
 import IdCard from './components/IdCard.js';
 import Greetings from './components/Greetings.js';
 import Random from './components/Random.js';
+import Carousel from './components/Carousel.js';
 import BoxColor from './components/BoxColor.js';
 import DriverCard from './components/DriverCards.js';
 import Rating from './components/Rating.js';
+import Dice from './components/Dice.js';
+import LikeButton from './components/LikeButton.js';
+import ClickablePicture from './components/ClickablePicture.js';
 import CreditCard from './components/creditCard/CreditCard.js';
 import './index.css';
 class App extends Component {
@@ -87,7 +91,14 @@ class App extends Component {
             model: "Audi A3",
             licensePlate: "BE33ER"
           }} />
-            </div>
+          <LikeButton /> <LikeButton />
+          <ClickablePicture
+          img="/img/persons/maxence.png"
+          imgClicked="/img/persons/maxence-glasses.png" />
+          <Dice />
+          <Carousel
+           imgs={["https://randomuser.me/api/portraits/women/1.jpg", "https://randomuser.me/api/portraits/men/1.jpg","https://randomuser.me/api/portraits/women/2.jpg", "https://randomuser.me/api/portraits/men/2.jpg"]} />
+           </div>
           );
   }
 }
