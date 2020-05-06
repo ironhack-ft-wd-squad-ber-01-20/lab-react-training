@@ -12,3 +12,55 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+.idCard{
+  border: 1px solid black;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+  width: 25rem;
+}
+.boxColor{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25rem;
+  height: 15rem;
+  font-weight: bold;
+  color: azure;
+}
+.creditCard{
+  width: 25rem;
+ display: flex;
+ flex-direction: column;
+  height: 15rem;
+}
+.type{
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 2rem;
+}
+.allTheCards{
+  display: flex;
+}
+.driverCard{
+  background-color: #425cbb;
+  border-radius: 10px;
+  color: #fff;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem;
+}
+.driverCard img{
+  width: 14rem;
+  border-radius: 51%;
+}
+.likeButton{
+  padding: 1.5em;
+  color: #fff;
+  font-size: 1rem;
+}
+.imgDice{
+  width: 5rem;
+}
