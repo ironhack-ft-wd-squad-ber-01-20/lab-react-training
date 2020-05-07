@@ -1,0 +1,41 @@
+.CreditCardPanel {
+  width: 300px;
+  height: 170px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin: 1%;
+}
+
+.CreditCardPanel p {
+  margin: 0;
+  padding: 0;
+}
+
+.CardTop {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.CardTop p {
+  margin: 3%;
+}
+
+.CardMiddle {
+  display: flex;
+  justify-content: center;
+}
+
+.CardMiddle p {
+  margin: 3%;
+}
+
+.CardBottom {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin: 3%;
+}

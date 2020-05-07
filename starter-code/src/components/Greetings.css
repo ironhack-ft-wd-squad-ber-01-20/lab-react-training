@@ -1,0 +1,11 @@
+.GreetingsPanel {
+  background-color: whitesmoke;
+  border: 2px solid #000;
+  padding: 1%;
+  margin: 1%;
+}
+
+.GreetingsPanel p {
+  margin: 0;
+  padding: 0;
+}

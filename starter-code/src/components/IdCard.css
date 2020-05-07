@@ -1,0 +1,20 @@
+.IdCardPanel {
+  background-color: whitesmoke;
+  display: flex;
+  flex-direction: row;
+  border: 2px solid #000;
+  margin: 1%;
+}
+
+.IdCardPanel img {
+  padding: 1%;
+}
+
+.IdCardPanelText {
+  padding: 1%;
+}
+
+.IdCardPanelText p {
+  margin: 0;
+  padding: 0;
+}
