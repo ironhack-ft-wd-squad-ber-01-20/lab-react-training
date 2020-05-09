@@ -9,12 +9,6 @@ class FaceBook extends Component {
   };
 
   render() {
-    // const type = this.state.profiles.map((profile) => (
-    //     if ({profile.isStudent}) {
-    //     return <p>Student</p>
-    //     }
-    //     else { return <p>Teacher</p>));
-
     const profileItems = this.state.profiles.map((profile, index) => (
       <div key={index} className="profile-outer-container">
         <img src={profile.img}></img>
@@ -31,7 +25,15 @@ class FaceBook extends Component {
             <strong>Country: </strong>
             {profile.country}
           </p>
-          {/* {type} */}
+          {profile.isStudent ? (
+            <p>
+              <strong>Type: </strong>Student
+            </p>
+          ) : (
+            <p>
+              <strong>Type: </strong>Teacher
+            </p>
+          )}
         </li>
       </div>
     ));
