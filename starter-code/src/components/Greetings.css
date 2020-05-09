@@ -1,0 +1,11 @@
+.greeting-card {
+  border: solid;
+  border-width: 2px;
+  display: flex;
+  margin-bottom: 1vh;
+  width: 100vh;
+}
+
+.greeting-card > p {
+  margin-left: 2vh;
+}
