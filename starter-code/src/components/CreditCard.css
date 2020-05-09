@@ -1,0 +1,33 @@
+.card-box {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+.creditcard-card {
+  border-radius: 10px;
+  margin: 1vh;
+  width: 50vh;
+  height: 30vh;
+  line-height: 0.3em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card-type {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 2vh;
+}
+
+.card-number {
+  font-weight: bold;
+  font-size: 22px;
+  margin-left: 2vh;
+  font-size: 24px;
+}
+
+.data {
+  margin-left: 2vh;
+  font-size: 16px;
+}

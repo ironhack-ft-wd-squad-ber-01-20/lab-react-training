@@ -1,0 +1,88 @@
+.App {
+  margin-left: 1vh;
+  font-size: 24px;
+}
+
+.random-card {
+  border: solid;
+  border-width: 2px;
+  margin-bottom: 1vh;
+  width: 100vh;
+}
+
+.random-card > p {
+  margin-left: 2vh;
+}
+
+.box-color {
+  border: solid black;
+  border-width: 2px;
+  margin-bottom: 1vh;
+  padding: 4vh;
+  width: 100vh;
+  text-align: center;
+}
+
+.likes-button {
+  padding: 2vh 4vh;
+  font-size: 18px;
+  margin: 4vh;
+}
+
+.dice-container {
+  width: 20vh;
+  height: 20vh;
+  margin: 5vh;
+}
+
+.dice-container > img {
+  width: 18vh;
+  height: auto;
+}
+
+.carousel {
+  margin: 5vh;
+  display: flex;
+  flex-direction: row;
+}
+
+.carousel > button {
+  margin: 2vh;
+  height: 5vh;
+  width: 10vh;
+}
+
+.number-container {
+  margin: 5vh;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 90vh;
+}
+
+.number-container > li {
+  border: solid;
+  width: 15vh;
+  height: 15vh;
+}
+
+.facebook {
+  list-style: none;
+}
+
+.profile-outer-container {
+  display: flex;
+  border: solid;
+  margin: 5vh;
+}
+.profile-outer-container > img {
+  height: 30vh;
+  width: 30vh;
+  object-fit: cover;
+  padding: 4vh;
+}
+
+.profile-container {
+  width: 90vh;
+}
