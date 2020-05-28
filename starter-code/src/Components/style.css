@@ -1,0 +1,34 @@
+
+.profile {
+    display: flex;
+    flex-direction: row;
+    border-radius: 1rem;
+    border: solid pink;
+    width: 300px
+}
+
+.likeMe {
+    margin-bottom: 2rem;
+    margin-left: 2rem;
+    font-size: 36px;
+}
+
+.star {
+    width: 30px;
+}
+
+/* create round image */
+img {
+    border-radius: 50%;
+  }
+
+button:focus{
+    background: black;
+    color: white;
+}
+
+.creditCard {
+   width: 20rem;
+   height: 10rem;
+   border-radius: 10px 10px 10px 10px;
+}
