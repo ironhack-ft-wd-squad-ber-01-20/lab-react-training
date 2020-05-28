@@ -1,11 +1,11 @@
 
-.profile {
+/* .profile {
     display: flex;
     flex-direction: row;
     border-radius: 1rem;
     border: solid pink;
     width: 300px
-}
+} */
 
 .likeMe {
     margin-bottom: 2rem;
@@ -31,4 +31,15 @@ button:focus{
    width: 20rem;
    height: 10rem;
    border-radius: 10px 10px 10px 10px;
+}
+
+.profile {
+   width: 20rem;
+   height: 10rem;
+   border-radius: 10px 10px 10px 10px;
+   background: #11aa99;
+   color: whitesmoke;
+   display: flex;
+   flex-direction: row;
+   margin-bottom: 0.5rem;
 }

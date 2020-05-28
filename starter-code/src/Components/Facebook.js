@@ -1,21 +1,20 @@
-// import React from 'react';
-// import profiles from './data/berlin.json'
+import React from 'react';
 
+function Facebook(props) {
+    
+    const copy = props.profilesData.map(profile => {
+        return (
+         <div className="profile"> 
+              <div><img src={profile.img} style={{ width: '100px' }}/></div>
+            <div className="id">
+              <div>{profile.firstName} {profile.lastName}</div>
+              <div>{profile.country}</div>
+              </div>
+          </div>
+        )
+    })
 
+    return copy.slice(0,5);
+}
 
-// // const profilesFB = profiles;
-// export default function profilesList(props) {
-
-//     const profiles = props.profiles.map(profile => {
-//         return (
-//             <div key={profile.id}>
-//                 <p>First Name: {profile.firstName}</p>
-//                 <p>Conutry: {profile.country}</p>
-//                 {profile.isStudent? <p>Student</p> : <p>Teacher</p>}
-//             </div>
-//         )
-//     })
-
-//     return <div>{profiles}</div>
-
-// }
+export default Facebook;
