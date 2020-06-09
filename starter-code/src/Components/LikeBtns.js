@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './style.css';
 
-
+//hook practice
 function LikeBtns() {
     const [count, incrementMe] = useState(0);
     const [liked, likeMe] = useState(false);

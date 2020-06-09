@@ -9,6 +9,7 @@ import LikeButton from './Components/LikeButton';
 import LikeBtns from './Components/LikeBtns'
 
 import Facebook from './Components/Facebook';
+import FacebookBtns from './Components/FacebookBtns';
 import profiles from './data/berlin.json'
 
 import './Components/style.css';
@@ -34,7 +35,7 @@ class App extends Component {
     return (
       <div className="App">
         <h1>Facebook</h1>
-        <Facebook
+        <FacebookBtns
           profilesData={profilesData}
         />
         <h1>IdCard</h1>
