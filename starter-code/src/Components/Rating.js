@@ -1,83 +1,27 @@
 import React from 'react';
 
-
- class Rating extends React.Component {
+//display same images multiple times
+function Rating(props)  {
+  const stars = Math.round(props.children);
   
-  render() {
-    const stars = Math.round(this.props.children)
-    
-    
-    if (stars < 1) {
-      return (
-      <div>
-        <img className="star" src="../img/iconfinder_star.png" />
-        <img className="star" src="../img/iconfinder_star.png" />
-        <img className="star" src="../img/iconfinder_star.png" />
-        <img className="star" src="../img/iconfinder_star.png" />
-        <img className="star" src="../img/iconfinder_star.png" />
-      </div>
-      )
+  function ratingStars() {
+    const result = [];
+    for (let i = 0; i < stars; i ++) {
+      result.push(<img class="star" src="../img/iconfinder_full.png" />)
     }
-
-    else if (stars == 1) {
-      return (
-      <div>
-        <img class="star" src="../img/iconfinder_full.png" />
-        <img class="star" src="../img/iconfinder_star.png" />
-        <img class="star" src="../img/iconfinder_star.png" />
-        <img class="star" src="../img/iconfinder_star.png" />
-        <img class="star" src="../img/iconfinder_star.png" />
-      </div>
-      )
+    for (let j = 0; j < 5 - stars; j ++) {
+      result.push(<img className="star" src="../img/iconfinder_star.png" />)
     }
-    else if (stars == 2) {
-        return (
-          <div>
-            <img class="star" src="../img/iconfinder_full.png" />
-            <img class="star" src="../img/iconfinder_full.png" />
-            <img class="star" src="../img/iconfinder_star.png" />
-            <img class="star" src="../img/iconfinder_star.png" />
-            <img class="star" src="../img/iconfinder_star.png" />
-          </div>
-        )
-      }
-      else if (stars == 3) {
-        return (
-          <div>
-            <img class="star" src="../img/iconfinder_full.png" />
-            <img class="star" src="../img/iconfinder_full.png" />
-            <img class="star" src="../img/iconfinder_full.png" />
-            <img class="star" src="../img/iconfinder_star.png" />
-            <img class="star" src="../img/iconfinder_star.png" />
-          </div>
-        )
-      }
-      else if (stars == 4){
-        return (
-          <div>
-            <img class="star" src="../img/iconfinder_full.png" />
-            <img class="star" src="../img/iconfinder_full.png" />
-            <img class="star" src="../img/iconfinder_full.png" />
-            <img class="star" src="../img/iconfinder_full.png" />
-            <img class="star" src="../img/iconfinder_star.png" />
-          </div>
-        )
-      }
-      else {
-        return (
-          <div>
-            <img class="star" src="../img/iconfinder_full.png" />
-            <img class="star" src="../img/iconfinder_full.png" />
-            <img class="star" src="../img/iconfinder_full.png" />
-            <img class="star" src="../img/iconfinder_full.png" />
-            <img class="star" src="../img/iconfinder_full.png" />
-          </div>
-        )
-      }
-
-
+    return result;
   }
- }
+
+  return (
+    <div>
+      {ratingStars(stars)}
+    </div>
+  )
+
+}
 
 
 export default Rating;

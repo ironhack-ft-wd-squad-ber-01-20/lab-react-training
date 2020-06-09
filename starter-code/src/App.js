@@ -8,12 +8,36 @@ import DriverCard from './Components/DriverCard';
 import LikeButton from './Components/LikeButton';
 import LikeBtns from './Components/LikeBtns'
 
-// import Facebook from './Components/Facebook';
+import Facebook from './Components/Facebook';
+import FacebookBtns from './Components/FacebookBtns';
+import profiles from './data/berlin.json'
+
+import './Components/style.css';
+
+const profilesData = profiles;
 
 class App extends Component {
+  
   render() {
+    
+    const allProfiles = profilesData.map((profile, index) => {
+      
+      return (
+      <div> 
+          <p><img src={profile.img} style={{ width: '100px' }}/></p>
+          <p>{profile.firstName} {profile.lastName}</p>
+          <p>{profile.country}</p>
+          {/* <td><button onClick={handleDelete}>delete</button></td> */}
+      </div>
+      )
+    })
+
     return (
       <div className="App">
+        <h1>Facebook</h1>
+        <FacebookBtns
+          profilesData={profilesData}
+        />
         <h1>IdCard</h1>
         <IdCard 
           lastName="Don" 
@@ -39,6 +63,24 @@ class App extends Component {
           owner="Maxence Bouret"
           bgColor="#11aa99"
           color="white" />  
+        <CreditCard 
+          type="Master Card"
+          number="0123456789010995"
+          expirationMonth={3}
+          expirationYear={2021}
+          bank="N26"
+          owner="Maxence Bouret"
+          bgColor="#eeeeee"
+          color="#222222" />
+        <CreditCard 
+          type="Visa"
+          number="0123456789016984"
+          expirationMonth={12}
+          expirationYear={2019}
+          bank="Name of the Bank"
+          owner="Firstname Lastname"
+          bgColor="#ddbb55"
+          color="white" />
         <h1>Rating</h1>
           <Rating>0</Rating>
           <Rating>1.49</Rating>
@@ -59,7 +101,8 @@ class App extends Component {
           <LikeButton />
           <LikeBtns />
         <h1>Facebook | List and Keys</h1>
-          {/* <Facebook /> */}
+          {allProfiles}
+        
       </div>
     );
   }
