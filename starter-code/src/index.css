@@ -69,3 +69,42 @@ span {
 .CreditCard .bank {
   margin-left: 20px;
 }
+
+.Rating {
+  font-size: 2rem;
+}
+
+.DriverCard {
+  background-color: #425cbb;
+  border-radius: 10px;
+  color: white;
+  padding: 15px;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+          justify-content: center;
+  -webkit-align-items: center;
+          align-items: center;
+  margin: 10px;
+}
+
+.DriverCard > * {
+  margin: 5px;
+}
+
+.DriverCard img {
+  height: 100px;
+  width: 100px;
+  object-fit: cover;
+  border-radius: 100px;
+}
+
+.DriverCard .right > * {
+  margin: 0;
+}
+
+.like-btn {
+  width:100%;
+  float: left;
+  display: flex;
+}
