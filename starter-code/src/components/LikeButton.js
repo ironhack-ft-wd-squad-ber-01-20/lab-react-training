@@ -4,11 +4,11 @@ const colors= ["purple", "blue", "green", "yellow", "orange", "red"];
 
 class LikeButton extends Component {
     state = {
-        likes: 0, 
+        number: 0,  
     }; 
     clickHandler= () => {
         this.setState({
-            likes: this.state.likes +1,
+            number: 0, 
         }); 
     }; 
     render() {
