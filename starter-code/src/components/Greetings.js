@@ -3,8 +3,8 @@ import React from 'react';
 
     
 const Greetings = (props) => {
-    const {lang, children} = props
-    let salve
+    const {lang, children} = props;
+    let salve;
     if(lang === 'de') {
         salve = 'Hallo'
     }
