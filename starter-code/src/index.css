@@ -22,3 +22,21 @@ code {
 .container img {
   height: 100%; 
 }
+
+.allcc{
+  width: 100%;  
+  display: flex; 
+  flex-direction: row; 
+  flex-wrap: wrap;
+}
+
+.creditcard {
+  border-radius: 25px; 
+  width: 250px; 
+  padding: 20px; 
+  margin: 20px; 
+}
+
+.ccNumber{
+  font-size: 30px;
+}
