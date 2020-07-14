@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
 
-function Greetings(props) {
+const Greetings = (props) => {
   let lang = { de: "Hallo", en: "Hi", es: "Hola", fr: "Bonjour" };
     return (
     <div className="box">
@@ -9,6 +9,6 @@ function Greetings(props) {
       </h3>
     </div>
   );
-}
+};
 
 export default Greetings;

@@ -2,7 +2,6 @@ import React, { Fragment } from "react";
 
 const Random = (props) => {
   let randomic = Math.random() * props.max + props.min;
-
   return (
     <Fragment>
       <p>

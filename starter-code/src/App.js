@@ -3,6 +3,7 @@ import IdCard from "./Components/IdCard"
 import Greetings from './Components/Greetings';
 import Random from "./Components/Random";
 import BoxColor from "./Components/BoxColor";
+import CreditCard from "./Components/CreditCard";
 
 const App = () => {
   return (
@@ -41,11 +42,43 @@ const App = () => {
 
       <h1>Box Color</h1>
       <div className="BoxColor">
-        <BoxColor back="rgb(255,0,0)" color="white"></BoxColor>
+        <BoxColor back="rgb(255,0,0)" color="white">#ff0000</BoxColor>
       </div>
       <div className="BoxColor">
-        <BoxColor back="rgb(128,255,0)" color="black"></BoxColor>
+        <BoxColor back="rgb(128,255,0)" color="#black"></BoxColor>
       </div>
+
+      <h1>CreditCard</h1>
+      <CreditCard 
+        type="Visa"
+        number="0123456789018845"
+        expirationMonth={3}
+        expirationYear={2021}
+        bank="BNP"
+        owner="Maxence Bouret"
+        bgColor="#11aa99"
+        color="white" 
+      />
+      <CreditCard 
+        type="Master Card"
+        number="0123456789010995"
+        expirationMonth={3}
+        expirationYear={2021}
+        bank="N26"
+        owner="Maxence Bouret"
+        bgColor="#eeeeee"
+        color="#222222" 
+      />
+      <CreditCard 
+        type="Visa"
+        number="0123456789016984"
+        expirationMonth={12}
+        expirationYear={2019}
+        bank="Name of the Bank"
+        owner="Firstname Lastname"
+        bgColor="#ddbb55"
+        color="white" 
+      />
 
     </div>
   );

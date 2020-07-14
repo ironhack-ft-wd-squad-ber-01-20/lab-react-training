@@ -1,7 +1,4 @@
 import React, { Component } from 'react';
-// import Rating from './Rating'
-
-// Definition of the component IdCard
 class IdCard extends Component {
   render() {
     return (
