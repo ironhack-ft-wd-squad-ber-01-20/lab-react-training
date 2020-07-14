@@ -33,7 +33,7 @@ const CreditCard = (props) => {
     }
 
     return (
-
+        <>
         <div style={style} className='CreditCard'>
             <div>
                 <img src={card} style={imgStyle} />
@@ -53,7 +53,7 @@ const CreditCard = (props) => {
                 <p>{owner}</p>
             </div>
         </div>
-
+        </>
     )
 }
 
