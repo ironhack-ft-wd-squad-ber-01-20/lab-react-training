@@ -1,0 +1,14 @@
+.flexCardsBox {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+
+}
+
+.creditCard {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+}
