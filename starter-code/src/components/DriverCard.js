@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from "react";
+import React from "react";
 import Rating from "./Rating.js";
 
 const DriverCard = (props) => {
@@ -18,7 +18,7 @@ const DriverCard = (props) => {
 
   return (
     <div style={style}>
-      <img src={props.img} style={imgStyle} /> <br />
+      <img src={props.img} style={imgStyle} alt=""/> <br />
       {props.name}
       <Rating>{props.rating}</Rating>
       {props.car.model} - {props.car.licensePlate}

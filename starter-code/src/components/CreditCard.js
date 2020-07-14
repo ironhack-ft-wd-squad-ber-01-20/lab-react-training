@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from "react";
+import React from "react";
 
 const CreditCard = (props) => {
   const style = {
@@ -18,10 +18,10 @@ const CreditCard = (props) => {
     new Array(props.number.length - 3).join("•") + props.number.slice(-4);
 
   const type = () => {
-    if (props.type == "Visa")
-      return <img src="./img/visa.png" style={cardStyle} />;
-    if (props.type == "Master Card")
-      return <img src="./img/master-card.svg" style={cardStyle} />;
+    if (props.type === "Visa")
+      return <img src="./img/visa.png" style={cardStyle} alt=""/>;
+    if (props.type === "Master Card")
+      return <img src="./img/master-card.svg" style={cardStyle} alt=""/>;
   };
 
   return (

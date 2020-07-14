@@ -6,13 +6,16 @@ import BoxColor from "./components/BoxColor.js";
 import CreditCard from "./components/CreditCard.js";
 import Rating from "./components/Rating.js";
 import DriverCard from "./components/DriverCard.js";
+import ClickablePicture from "./components/ClickablePicture.js";
+import Dice from "./components/Dice.js";
+import Carousel from "./components/Carousel.js";
+import LikeButton from "./components/LikeButton.js";
 
 class App extends Component {
   render() {
     return (
       <div className="App">
         <h1>IdCard</h1>
-
         <IdCard
           lastName="Doe"
           firstName="John"
@@ -29,24 +32,16 @@ class App extends Component {
           birth={new Date("1988-05-11")}
           picture="https://randomuser.me/api/portraits/women/44.jpg"
         />
-
         <h1>Greetings</h1>
-
         <Greetings lang="de">Ludwig</Greetings>
         <Greetings lang="fr">François</Greetings>
-
         <h1>Random</h1>
-
         <Random min={1} max={6} />
         <Random min={1} max={100} />
-
         <h1>Box Color</h1>
-
         <BoxColor r={255} g={0} b={0} />
         <BoxColor r={128} g={255} b={0} />
-
         <h1>Credit Card</h1>
-
         <CreditCard
           type="Visa"
           number="0123456789018845"
@@ -77,18 +72,14 @@ class App extends Component {
           bgColor="#ddbb55"
           color="white"
         />
-
         <h1>Rating</h1>
-
         <Rating>0</Rating>
         <Rating>.49</Rating>
         <Rating>1.5</Rating>
         <Rating>3</Rating>
         <Rating>4</Rating>
         <Rating>5</Rating>
-
         <h1>Driver Card</h1>
-
         <DriverCard
           name="Travis Kalanick"
           rating={4.2}
@@ -106,6 +97,24 @@ class App extends Component {
             model: "Audi A3",
             licensePlate: "BE33ER",
           }}
+        />
+        <h1>Like Button</h1>
+        <LikeButton /> <LikeButton />
+        <h1>Clickable Picture</h1>
+        <ClickablePicture
+          img="/img/persons/maxence.png"
+          imgClicked="/img/persons/maxence-glasses.png"
+        />
+        <h1>Dice</h1>
+        <Dice />
+        <h1>Carousel</h1>
+        <Carousel
+          imgs={[
+            "https://randomuser.me/api/portraits/women/1.jpg",
+            "https://randomuser.me/api/portraits/men/1.jpg",
+            "https://randomuser.me/api/portraits/women/2.jpg",
+            "https://randomuser.me/api/portraits/men/2.jpg",
+          ]}
         />
       </div>
     );
