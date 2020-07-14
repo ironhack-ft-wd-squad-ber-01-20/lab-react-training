@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import IdCard from './components/IdCard'
+import Greetings from './components/Greetings'
 import Profiles from './data/berlin.json'
 
 class App extends Component {
@@ -19,7 +20,11 @@ class App extends Component {
             height={profile.height}
             birth={new Date("1988-05-11")}
             picture={profile.img}
-          />)}
+          />
+        )}
+
+        <Greetings lang="de">Ludwig</Greetings>
+        <Greetings lang="fr">François</Greetings>
 
 
 

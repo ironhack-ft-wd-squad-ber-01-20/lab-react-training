@@ -1,0 +1,9 @@
+.greeting{
+    padding:10px;
+    border:1px solid #7829f7;
+    border-radius:10px;
+    width:50%;
+    text-align:center;
+    font-size:2rem;
+    margin:15px auto
+}
