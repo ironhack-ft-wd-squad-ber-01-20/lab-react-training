@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import IdCard from "./Components/IdCard"
 import Greetings from './Components/Greetings';
+import Random from "./Components/Random";
 
 
 const App = () => {
@@ -17,8 +18,8 @@ const App = () => {
       />
 
       <IdCard
-        lastName="Delores"
-        firstName="Obrien"
+        lastName="O'Brien"
+        firstName="Delores"
         gender="female"
         height="172"
         birth={new Date("1988-05-11").toDateString()}
@@ -26,8 +27,12 @@ const App = () => {
       />
 
       <h1>Greetings</h1>
-      <Greetings name="Markus" lang="nor"></Greetings>
+      <Greetings name="Markus" lang="de"></Greetings>
       <Greetings name="François" lang="fr"></Greetings>
+
+      <Random min={1} max={6}/>
+      <Random min={1} max={100}/>
+
     </div>
   );
 }
