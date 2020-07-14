@@ -6,7 +6,7 @@ class App extends Component {
     return (
       <div className="App">
         <h1>IdCard</h1>
-        <IdCard
+        <div className = "idCards"><IdCard
   lastName='Doe'
   firstName='John'
   gender='male'
@@ -14,7 +14,8 @@ class App extends Component {
   birth={new Date("1992-07-14")}
   picture="https://randomuser.me/api/portraits/men/44.jpg"
 />
-
+</div> 
+<div className = "idCards">
 <IdCard
   lastName='Delores '
   firstName='Obrien'
@@ -23,7 +24,7 @@ class App extends Component {
   birth={new Date("1988-05-11")}
   picture="https://randomuser.me/api/portraits/women/44.jpg"
 />
-        
+</div>
 
         <h1>Greetings</h1>
         {/* TODO: Use the Greetings component */}
