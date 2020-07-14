@@ -1,0 +1,47 @@
+.likeMe {
+    margin-bottom: 2rem;
+    margin-left: 2rem;
+    font-size: 36px;
+}
+
+.star {
+    width: 30px;
+}
+
+/* create round image */
+img {
+    border-radius: 50%;
+  }
+
+button:focus{
+    background: black;
+    color: white;
+}
+
+.creditCard {
+   width: 20rem;
+   height: 10rem;
+   border-radius: 10px 10px 10px 10px;
+}
+
+.profile {
+   width: 20rem;
+   height: 10rem;
+   border-radius: 10px 10px 10px 10px;
+   background: #11aa99;
+   color: whitesmoke;
+   display: flex;
+   flex-direction: row;
+   margin-bottom: 0.5rem;
+}
+
+.highlight {
+    width: 20rem;
+    height: 10rem;
+    border-radius: 10px 10px 10px 10px;
+    background:black;
+    color: whitesmoke;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 0.5rem;
+}
