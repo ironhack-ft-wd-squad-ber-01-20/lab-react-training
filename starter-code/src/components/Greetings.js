@@ -7,7 +7,7 @@ function Greetings(props) {
     if (props.lang ==="de") greeting="Hallo"; 
     if (props.lang ==="es") greeting="Hola"; 
     return (
-        <div className="greeting">
+        <div className="container">
             <p>{greeting} {props.children}</p>
         </div>
     )
