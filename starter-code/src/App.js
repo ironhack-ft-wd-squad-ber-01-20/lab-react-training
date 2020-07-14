@@ -8,11 +8,12 @@ import Rating from "./Components/Rating";
 import DriverCard from "./Components/DriverCard";
 import LikeButton from "./Components/LikeButton";
 import ClickablePicture from "./Components/ClickablePicture";
+import Dice from "./Components/Dice";
 
 const App = () => {
   return (
     <div className="App">
-      <h1>IdCard</h1>
+      <h1>Component | IdCard</h1>
       <IdCard
         lastName="Doe"
         firstName="John"
@@ -31,12 +32,12 @@ const App = () => {
         picture="https://randomuser.me/api/portraits/women/44.jpg"
       />
 
-      <h1>Greetings</h1>
-      <Greetings name="Markus" lang="de"></Greetings>
-      <Greetings name="François" lang="fr"></Greetings>
+      <h1>Component | Greetings</h1>
+        <Greetings name="Markus" lang="de"></Greetings>
+        <Greetings name="François" lang="fr"></Greetings>
  
 
-      <h1>Random</h1>
+      <h1>Component | Random</h1>
       <div className="box">
         <Random min={1} max={6}/>
       </div>
@@ -44,7 +45,7 @@ const App = () => {
         <Random min={1} max={100}/>
       </div>
 
-      <h1>Box Color</h1>
+      <h1>Component | Box Color</h1>
       <div className="BoxColor">
         <BoxColor back="rgb(255,0,0)" color="white">#ff0000</BoxColor>
       </div>
@@ -52,7 +53,7 @@ const App = () => {
         <BoxColor back="rgb(128,255,0)" color="#black"></BoxColor>
       </div>
 
-      <h1>CreditCard</h1>
+      <h1>Component | CreditCard</h1>
       <CreditCard 
         type="Visa"
         number="0123456789018845"
@@ -84,7 +85,7 @@ const App = () => {
         color="white" 
       />
 
-      <h1>Rating</h1>
+      <h1>Component | Rating</h1>
       <Rating>0</Rating>
       <Rating>1.49</Rating>
       <Rating>1.5</Rating>
@@ -92,15 +93,15 @@ const App = () => {
       <Rating>4</Rating>
       <Rating>5</Rating>
 
-      <h1>DriverCard</h1>
+      <h1>Component | DriverCard</h1>
       <DriverCard 
-      name="Travis Kalanick"
-      rating={4.2}
-      img="https://si.wsj.net/public/resources/images/BN-TY647_37gql_OR_20170621052140.jpg?width=620&height=428"
-      car={{
-        model: "Toyota Corolla Altis",
-        licensePlate: "CO42DE"
-      }} />
+        name="Travis Kalanick"
+        rating={4.2}
+        img="https://si.wsj.net/public/resources/images/BN-TY647_37gql_OR_20170621052140.jpg?width=620&height=428"
+        car={{
+          model: "Toyota Corolla Altis",
+          licensePlate: "CO42DE"
+        }} />
       <DriverCard 
         name="Dara Khosrowshahi"
         rating={4.9}
@@ -110,8 +111,7 @@ const App = () => {
           licensePlate: "BE33ER"
       }} />
 
-
-      <h1>LikeButton</h1>
+      <h1>Component | LikeButton</h1>
       <div className="like-btn">
         <LikeButton />
         <LikeButton />    
@@ -122,6 +122,9 @@ const App = () => {
         img="/img/persons/maxence.png"
         imgClicked="/img/persons/maxence-glasses.png" 
       />
+
+      <h1>State | Dice</h1>
+      <Dice />
 
     </div>
   );

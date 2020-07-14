@@ -108,3 +108,8 @@ span {
   float: left;
   display: flex;
 }
+
+.Dice {
+  height: 100px;
+  width: 100px;
+}
