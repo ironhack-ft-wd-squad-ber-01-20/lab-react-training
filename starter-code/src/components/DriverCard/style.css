@@ -1,0 +1,31 @@
+.drive-card{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#455EB4;
+    width: 50%;
+    border-radius:10px;
+    margin:5px auto;
+    color:#fff;
+    padding:10px 50px;
+    width:80%;
+}
+.drive-card :nth-child(n){
+    margin: 5px;
+}
+
+.drive-card-img{
+    height: 100px;
+    width:100px;
+    border-radius:100%;
+}
+.drive-card-details{
+    
+}
+.drive-card-details :nth-child(n){
+    margin:2px;
+}
+.drive-card-name{
+    font-size:1.5rem;
+    font-weight:bold
+}

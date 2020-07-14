@@ -1,0 +1,16 @@
+.card{
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+    border: 1px solid #8334f2;
+    border-radius:10px;
+    background: #d3b4ff;
+}
+.card :nth-child(n){
+    margin:5px;
+}
+.card-img{
+    height: 150px;
+    width: auto;
+    max-width: 150px;
+}
