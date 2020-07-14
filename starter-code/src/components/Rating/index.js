@@ -7,7 +7,7 @@ export default function index({ children }) {
     const arrayStarts = [1, 2, 3, 4, 5]
     return (
         <div className="rating">
-            {arrayStarts.map((star, index) => <span key={uuidv4()} className={`fa fa-3x fa-star ${index < howManyChecked ? 'checked' : ''}`}></span>)}
+            {arrayStarts.map((star, index) => <span key={uuidv4()} className={`fa fa-2x fa-star ${index < howManyChecked ? 'checked' : ''}`}></span>)}
         </div>
     )
 }

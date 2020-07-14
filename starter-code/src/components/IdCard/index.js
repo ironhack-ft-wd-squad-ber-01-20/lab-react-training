@@ -1,4 +1,5 @@
 import React from 'react'
+
 import './style.css'
 
 export default function index({ firstName, lastName, picture, gender, height, birth }) {
