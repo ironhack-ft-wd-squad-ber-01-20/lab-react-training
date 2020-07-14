@@ -5,7 +5,10 @@ import Random from './components/Random';
 import Boxcolor from './components/Boxcolor'; 
 import CreditCard from './components/CreditCard'; 
 import Rating from './components/Rating'; 
-import DriverCard from './components/DriverCard'
+import DriverCard from './components/DriverCard'; 
+import LikeButton from './components/LikeButton'; 
+import ClickablePic from './components/ClickablePic'; 
+import Dice from './components/Dice'; 
 
 
 class App extends Component {
@@ -105,7 +108,16 @@ class App extends Component {
             model: "Audi A3",
             licensePlate: "BE33ER"
           }} />
+          <h1>Like Button</h1>
+          <LikeButton/><LikeButton/>
 
+          <h1>Clickable Pic</h1>
+          <ClickablePic
+          img="/img/persons/maxence.png"
+          imgClicked="/img/persons/maxence-glasses.png" />
+
+          <h1>Dice</h1>
+          <Dice />
       </div>
     );
   }
