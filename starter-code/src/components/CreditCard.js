@@ -27,7 +27,7 @@ const CreditCard = (props) => {
         const masked = cc.slice(-4);
         let countNum = "";
         for (let i = (cc.length) - 4; i > 0; i--) {
-            countNum += "#"
+            countNum += "⭐"
         }
         return countNum + masked
     }

@@ -7,7 +7,7 @@ const BoxColor = (props) => {
     };
 
     return (
-        <div className='BoxColor' style={style}>rgb({r},{g},{b}</div>
+        <div className='BoxColor' style={style}>rgb({r},{g},{b})</div>
     )
 }
 
