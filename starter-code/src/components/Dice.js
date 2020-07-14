@@ -19,7 +19,6 @@ class Dice extends Component {
         }, 1000);
     }
     render() {
-        let dice = './img/dice3.png';
         let imgStyle = {
             marginLeft: '50px',
             width: '200px'
