@@ -1,0 +1,11 @@
+.number{
+    padding:10px;
+    border:1px solid #ff0044;
+    border-radius:10px;
+    width:50%;
+    text-align:center;
+    font-size:1.5rem;
+    margin:15px auto;
+    background:#fecdef;
+    color:#762b5f;
+}
