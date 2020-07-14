@@ -9,6 +9,8 @@ import DriverCard from "./Components/DriverCard";
 import LikeButton from "./Components/LikeButton";
 import ClickablePicture from "./Components/ClickablePicture";
 import Dice from "./Components/Dice";
+import NumbersTable from './Components/NumbersTable';
+import Carousel from "./Components/Carousel";
 
 const App = () => {
   return (
@@ -125,6 +127,15 @@ const App = () => {
 
       <h1>State | Dice</h1>
       <Dice />
+
+      <h1>State | Carousel</h1>
+      <Carousel
+        imgs={["https://randomuser.me/api/portraits/women/1.jpg", "https://randomuser.me/api/portraits/men/1.jpg","https://randomuser.me/api/portraits/women/2.jpg", "https://randomuser.me/api/portraits/men/2.jpg"]} 
+      />
+      
+      <h1>List and Keys | NumbersTable</h1>
+      <NumbersTable limit={12} />
+
 
     </div>
   );
