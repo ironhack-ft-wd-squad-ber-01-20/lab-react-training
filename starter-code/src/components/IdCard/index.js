@@ -2,7 +2,6 @@ import React from 'react'
 import './style.css'
 
 export default function index({ firstName, lastName, picture, gender, height, birth }) {
-    console.log(birth)
     return (
         <figure className="card">
             <img className='card-img' src={picture} alt="username" />

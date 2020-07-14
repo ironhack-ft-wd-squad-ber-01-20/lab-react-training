@@ -1,23 +1,23 @@
 import React, { Component } from 'react';
+import { v4 as uuidv4 } from 'uuid';
 import IdCard from './components/IdCard'
 import Greetings from './components/Greetings'
 import Random from './components/Random'
 import BoxColor from './components/BoxColor'
 import CreditCard from './components/CreditCard'
+import Rating from './components/Rating'
 import Profiles from './data/berlin.json'
 
 
 class App extends Component {
 
   render() {
-    console.log(Profiles[0])
     return (
       <div className="App">
         <h1>IdCard</h1>
         {/* TODO: Use the IdCard component */}
         {Profiles && Profiles.map((profile, index) =>
-
-          <IdCard key={index}
+          <IdCard key={uuidv4()}
             lastName={profile.lastName}
             firstName={profile.firstName}
             gender={profile.gender}
@@ -66,7 +66,18 @@ class App extends Component {
           owner="Firstname Lastname"
           bgColor="#ddbb55"
           color="white" />
+
+        <h1>Rating</h1>
+
+        <Rating>0</Rating>
+        <Rating>1.49</Rating>
+        <Rating>1.5</Rating>
+        <Rating>3</Rating>
+        <Rating>4</Rating>
+        <Rating>5</Rating>
       </div>
+
+
     );
   }
 }
