@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import IdCard from "./Components/IdCard"
 import Greetings from './Components/Greetings';
 import Random from "./Components/Random";
-
+import BoxColor from "./Components/BoxColor";
 
 const App = () => {
   return (
@@ -29,9 +29,23 @@ const App = () => {
       <h1>Greetings</h1>
       <Greetings name="Markus" lang="de"></Greetings>
       <Greetings name="François" lang="fr"></Greetings>
+ 
 
-      <Random min={1} max={6}/>
-      <Random min={1} max={100}/>
+      <h1>Random</h1>
+      <div className="box">
+        <Random min={1} max={6}/>
+      </div>
+      <div className="box">
+        <Random min={1} max={100}/>
+      </div>
+
+      <h1>Box Color</h1>
+      <div className="BoxColor">
+        <BoxColor back="rgb(255,0,0)" color="white"></BoxColor>
+      </div>
+      <div className="BoxColor">
+        <BoxColor back="rgb(128,255,0)" color="black"></BoxColor>
+      </div>
 
     </div>
   );
