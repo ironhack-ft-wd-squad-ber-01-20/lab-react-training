@@ -3,7 +3,6 @@ import React from "react";
 
 const IdCard = (props) => {
     return (
-       <div className='App'>
            <div className='IdCard box'>
                <img src={props.picture} alt='userpicture'></img>
                <div className='rigth'>
@@ -14,7 +13,6 @@ const IdCard = (props) => {
                     <strong>Birth:</strong>{props.birth}<br></br>
                 </div>
            </div>
-       </div>
     )
 }
 
