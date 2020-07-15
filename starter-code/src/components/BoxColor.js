@@ -4,7 +4,7 @@ const BoxColor = (props) => {
     
     const divStyle = {
         backgroundColor: 'rgb(' + props.r + ', '+ props.g + ', '+ props.b + ')',
-        color: "white",
+        color: props.color,
     };
     return (
       <div className="BoxColor box" style={divStyle}>
