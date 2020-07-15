@@ -36,3 +36,8 @@ div {
 strong {
   font-weight: bold;
 }
+
+.BoxColor{
+  text-align: center;
+  padding: 20px;
+}
