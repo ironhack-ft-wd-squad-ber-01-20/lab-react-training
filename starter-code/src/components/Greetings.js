@@ -1,14 +1,12 @@
-import React from "react";
+import React, {Component} from "react";
 
-const Greetings = (props) => {
-
-    if (props.lang === 'de')
-    return <div className='box'>Hallo {props.children}</div>
-        else if (props.lang === 'fr')
-            return <div className='box'>Bonjour {props.children}</div> 
-                else if (props.lang === 'es') return <div className='box'>Hola {props.children}</div>
-                    else if (props.lang === 'en') return <div className='box'>Hi {props.children}</div>
-                    
+export default class Greetings extends Component {
+    render(){
+        if (this.props.lang === 'de')
+        return <div className='box'>Hallo {this.props.children}</div>
+            else if (this.props.lang === 'fr')
+                return <div className='box'>Bonjour {this.props.children}</div> 
+                    else if (this.props.lang === 'es') return <div className='box'>Hola {this.props.children}</div>
+                        else if (this.props.lang === 'en') return <div className='box'>Hi {this.props.children}</div>
+    }                
 }
-
-export default Greetings;
