@@ -92,3 +92,21 @@ strong {
   object-fit: cover;
   border-radius: 100px;
 }
+
+.LikeButton {
+  border: none;
+  color: white;
+  padding: 10px 28px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.ClickablePicture, .Dice {
+    cursor: pointer;
+}
+
+.ClickablePicture, .Dice {
+    height: 100px;
+    width: 100px;
+}
