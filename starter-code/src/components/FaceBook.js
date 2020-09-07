@@ -2,6 +2,19 @@ import React, { Component } from 'react'
 import profiles from '../data/berlin.json'
 
 export default class FaceBook extends Component {
+
+    state = {
+        profiles: profiles
+    }
+
+    englandHandler = () => {
+        this.setState((state, props) => ({
+            profiles: profiles.country
+        }))
+        return ({
+
+        })
+    }
     
     render() {
         const profilesFB = profiles.map((profile, index) => {
@@ -18,6 +31,14 @@ export default class FaceBook extends Component {
         })
         return (
             <div>
+                <button>All</button>
+                <button onClick={this.englandHandler}>England</button>
+                <button>USA</button>
+                <button>Malasya</button>
+                <button>Germany</button>
+                <button>Sweden</button>
+                <button>Nigeria</button>
+                <button>Italy</button>
                 {profilesFB}
             </div>
         )
